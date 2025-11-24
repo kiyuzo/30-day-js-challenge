@@ -7,6 +7,19 @@
     <link rel="icon" href="https://fav.farm/🔥" />
   </head>
   <body>
-    <script></script>
+    <script>
+      const pressed = [];
+      const secret = 'masgodas';
+
+      window.addEventListener('keyup', (e) => {
+        pressed.push(e.key);
+        pressed.splice(-secret.length - 1, pressed.length - secret.length);
+        if (pressed.join('').includes(secret)) {
+          console.log('YOU DID IT DING DING DING!');
+          cornify_add();
+        };
+      });
+
+    </script>
   </body>
 </html>
